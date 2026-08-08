@@ -20,3 +20,10 @@ def rightTriangle(n):
         print(" ", end="")
     print()
 print(rightTriangle(5))
+
+print("\nButterfly")
+def butterfly(n):
+  for i in range(2 * n - 1):
+    for j in range(2 * n - 1):
+      h = i if i < n else 2 * n - 2 - i
+      
