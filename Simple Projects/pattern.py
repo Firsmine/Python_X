@@ -1,3 +1,9 @@
+rows = int(input("The row size pattern: "))
+for i in range(1, rows + 1):
+  for j in range(1, i + 1):
+    print("*", end=" ")
+  print()
+
 print("\nDiamond")
 def diamond(n):
   for i in range(2 * n - 1):
