@@ -1,3 +1,11 @@
+print("\n===== Make Pattern =====")
+print("1. Right Triangle")
+print("2. Diamond")
+print("3. Butterfly")
+print("4. Hollow Square")
+
+pattern = int(input("Choose A Pattern You Wanna Make (1-4): "))
+
 rows = int(input("The row size pattern: "))
 for i in range(1, rows + 1):
   for j in range(1, i + 1):
