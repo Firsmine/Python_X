@@ -8,7 +8,7 @@ while True:
   try:
     pattern = int(input("Choose A Pattern You Wanna Make (1-4): "))
   except ValueError:
-    print(">>> Please select the valid menu.")
+    print("\n>>> Please select the valid menu.")
     continue
 
   if pattern == 1:
@@ -42,7 +42,7 @@ while True:
     try: 
       n = int(input("The row size pattern: "))
     except ValueError:
-      print(">>> Please input the valid number.")
+      print("\n>>> Please input the valid number.")
       continue
     for i in range(2 * n - 1):
       for j in range(2 * n - 1):
@@ -58,7 +58,11 @@ while True:
 
   elif pattern == 4:
     print("\nHollow Square")
-    n = int(input("The row size pattern: "))
+    try:
+      n = int(input("The row size pattern: "))
+    except ValueError:
+      print("\n>>> Please input the valid number.")
+      continue
     for i in range(n):
       for j in range(n):
         if i == 0 or i == n-1 or j == 0 or j == n-1:
@@ -66,3 +70,6 @@ while True:
         else:
           print(" ", end=" ")
       print()
+    if input("Try another pattern? (y/n): ") != "y": 
+      print("G'bye!")
+      break
