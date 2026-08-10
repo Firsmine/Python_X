@@ -13,7 +13,11 @@ while True:
 
   if pattern == 1:
     print("\nRight Triangle")
-    n = int(input("The row size pattern: "))
+    try:
+      n = int(input("The row size pattern: "))
+    except ValueError:
+      print("\n>>> Please input the valid number.")
+      continue
     for i in range(1, n + 1):
       for j in range(1, i + 1):
         print("*", end=" ")
@@ -24,7 +28,11 @@ while True:
       
   elif pattern == 2:
     print("\nDiamond")
-    n = int(input("The row size pattern: "))
+    try:
+      n = int(input("The row size pattern: "))
+    except ValueError:
+      print("\n>>> Please input the valid number.")
+      continue
     for i in range(2 * n - 1):
       for j in range(2 * n - 1):
         h = i if i < n else 2 * n -2 - i
