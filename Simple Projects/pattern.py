@@ -9,8 +9,8 @@ while True:
 
   if pattern == 1:
     print("\nRight Triangle")
-    rows = int(input("The row size pattern: "))
-    for i in range(1, rows + 1):
+    n = int(input("The row size pattern: "))
+    for i in range(1, n + 1):
       for j in range(1, i + 1):
         print("*", end=" ")
       print()
@@ -29,6 +29,9 @@ while True:
         else:
           print(" ", end=" ")
       print()
+    if input("Try another pattern? (y/n): ") != "y": 
+          print("G'bye!")
+          break
 
   elif pattern == 3:
     print("\nButterfly")
