@@ -5,7 +5,11 @@ while True:
   print("3. Butterfly")
   print("4. Hollow Square")
 
-  pattern = int(input("Choose A Pattern You Wanna Make (1-4): "))
+  try:
+    pattern = int(input("Choose A Pattern You Wanna Make (1-4): "))
+  except ValueError:
+    print(">>> Please select the valid menu.")
+    continue
 
   if pattern == 1:
     print("\nRight Triangle")
@@ -35,7 +39,11 @@ while True:
 
   elif pattern == 3:
     print("\nButterfly")
-    n = int(input("The row size pattern: "))
+    try: 
+      n = int(input("The row size pattern: "))
+    except ValueError:
+      print(">>> Please input the valid number.")
+      continue
     for i in range(2 * n - 1):
       for j in range(2 * n - 1):
         h = i if i < n else 2 * n - 2 - i
@@ -44,6 +52,9 @@ while True:
         else:
           print(" ", end=" ")
       print()
+    if input("Try another pattern? (y/n): ") != "y": 
+          print("G'bye!")
+          break
 
   elif pattern == 4:
     print("\nHollow Square")
