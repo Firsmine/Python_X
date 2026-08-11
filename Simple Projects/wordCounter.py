@@ -1,7 +1,12 @@
-text = input("Input Text: ")
+# text = input("Input Text: ")
+# words = text.split()
+# count = len(words)
+# print(f"Total Words: {count}")
 
-words = text.split()
+import string
+userText = input("Enter Your Text: ")
+cleanedText = userText.translate(str.maketrans("", "", string.punctuation))
+wordsList = cleanedText.split()
+wordCount = len(wordsList)
 
-count = len(words)
-
-print("Total Words: {count}")
+print(f"\nWords: {wordCount}") 
